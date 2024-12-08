@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-wrapper nav ul{
+    display: flex;
+    gap: 20px;
+}
+ul {
+    list-style: none;
+}
+body{
+    background-color: #f2f2f2;
+    text-decoration-color: #333;
+    accent-color: #007bff, #ffc107;
+    border: #ccc;
+}
+/*links*/
+a {
+color: #077bff;
+text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+/*headings*/
+h1,h2,h3 {
+    color: #333;
+
+}
+
+/*Buttons*/
+button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #0062cc;
+}
+
+
+
+div.studentsucces{
+    background-color: #d8bcab;
+    }
+ 
+ div.studentsuccess h2{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 35px;
+    font-family: "Roboto Condensed";
+ }
+ div.studentsuccess div.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+ }
+ div.studentsuccess article img{
+    width: 100%;
+    object-fit: cover; 
+ }
+ div.studentsuccess article{
+    flex:1 1 30%;
+    min-width: 300px;
+    background-color: #d58f1f;
+    padding: 1em;
+    margin: 1em;
+ }
+ .articles ul {
+    list-style: disc;
+    margin-left: 1em;
+ }
+ .explore {
+    background-image: url("images/silhouette-of-statue-of-liberty-at-sunset-2023-11-27-05-03-40-utc.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    min-height:550px;
+    border-bottom: 3px solid black ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .explore h1{
+    margin-left: 35%;
+ }
+.ushistory .explore{
+    background-image: url("images/historic-horse-carriage-in-scotts-bluff-national-m-2023-11-27-05-00-32-utc.jpg");
+}
+body.ushistory article {
+    background-color: lightblue;
+}
+body.democracy article{
+    background-color: #7a879b;
+}
+.democracy .explore{
+    background-image: url("images/happy-senior-man-inserting-ballot-into-box-while-v-2024-02-29-05-12-44-utc.jpg");
