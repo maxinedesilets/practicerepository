@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--Changed language to Chinese-->
+<html lang="zh-Hans">
+
+<head>
+    <title>MeetAmerica - Slidehsow</title>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+        <!--stylesheet specifies that the linked file is a style sheet, which contains CSS rules for styling the HTML document. href="styles.css" specifies the URL to the external CSS file. Here, because styles.css is a relative path, its located in the same directory as that of the HTML file.if the file were on a remote server, the href would use a full URL (e.g., href="https://example.com/styles.css").-->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!--The class attributions (container and nav-wrapper) to the div allows them to be styled by CSS or identified in JS code for manipulation-->
+            <div class="nav-wrapper">
+                <a href="index.html"><h1 class="logo">Welcome to MeetAmerica</h1></a>
+                <div>
+                    <nav class="secondary">
+                        <ul>
+                            <li><a href="democracy.html"> 民主 </a></li>
+                            <li><a href="#"> 人权 </a></li>
+                            <li><a href="ushistory.html"> 美国历史 </a></li>
+                            <li><a href="#"> 联邦政府 </a></li>
+                            <li><a href="#"> 人口 </a></li>
+                            <li><a href="#"> 教育 </a></li>
+                            <li><a href="#"> 宗教 </a></li>
+                            <li><a href="#"> 社会问题 </a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+    
+<!--The div here, a block level container, is used to group the following carosaol content.-->
+    <div class="carosaol">
+        <!--two buttons are created one for previous (<) and one for next (>)(listed below)-->
+        <button class="previous">&lt;</button>
+              <div class="carosaolimages">
+                 <img src="images/map indian tribes.jpg" alt="distribution of indian tribes in the U.S.">
+                 <img src="images/IndianTent1.png">
+                 <img src="images/kane_assiniboine_hunting_buffaloanchor.jpeg">
+                 <img src="images/indianshootingbuffalo.png" alt="">
+                 <img src="images/indian in canneo.png">
+                 <img src="images/indians fighting.png">
+                 <img src="images/indians inside tent.png">
+                 <img src="images/YoungIndianmen in tent.png">
+                 <img src="images/three indians standing.png">
+                 <img src="images/indian tools.png">
+                 <img src="images/indian dream1.png">
+                 <img src="images/three indians dancing in ceromony.png">
+                 <img src="images/sixblueindians.png">
+                 <img src="images/Indian2.jpg">
+              </div>
+              <button class="next" style="cursor: pointer;">&gt;</button>
+     </div>
+
+
+     
+    </main>
+    <!--this HTML file is linked to JS file which enables the carosaol to function, i.e., images move forward or backward when arrows are clicked, one image will display at a time, etc. Eventlistener, other content explained in file-->
+     <script src="slider.js"></script>
+</body>
+</html>

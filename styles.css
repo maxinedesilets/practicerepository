@@ -1,22 +1,31 @@
+/* Note: Comments are used here to reinforcement learning, i.e., retain information in long-term memory. * is a universal selector which applies to all on this page and html. the curly braces open up a declaration block, inside of which   are property-value pairs. 0  here means no default space around the two values listed. box-sizing: border-box. First, box-sizing means changing how the browser calculates the width and height of elements. But use of border-boxmeans the same but also includes calculations involving the content, padding, and border. This block starts at the top to provide for consistent styling*/
+
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
 }
+
+/* Here the width is limited to 90% of the .container's parent element's width. Equal space is applied to the left and right sides of the element and be centered onn the page.*/
 .container{
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
+/* 5 pixels of padding is being added to the top of the header section and 10 below.*/
+
 header {
     padding-top: 5px;
     padding-bottom: 10px;
 }
+/*Targets div class nav-wrapper. Flexbox allows for aligning and distributing class
+child elements (nav items). Justify-content (default is horizontal). Space-between means giving equal space between items*/
 .nav-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+/*Targets all <ul> elements that are descendants of a <nav>, which is inside an element with the class nav-wrapper.A flex container is created (display) and the nav items (child elements) become flex items and are placed in a row horizontally.*/
 .nav-wrapper nav ul{
     display: flex;
     gap: 20px;
@@ -24,6 +33,7 @@ header {
 ul {
     list-style: none;
 }
+/*styling*/
 body{
     background-color: #f2f2f2;
     text-decoration-color: #333;
@@ -35,6 +45,7 @@ a {
 color: #077bff;
 text-decoration: none;
 }
+/*Targets all anchor elements when the mouse goes over them. An underline will appear beneath the text.*/
 a:hover{
     text-decoration: underline;
 }
@@ -53,16 +64,15 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
+/*will change to a darker blue when hovered over*/
 button:hover{
     background-color: #0062cc;
 }
-
-
-
-div.studentsucces{
-    background-color: #d8bcab;
+/* targets a div element with the class studentsuccess*/
+div.studentsuccess{
+    background-color: #faf8f6;
     }
- 
+ /*Targets same class h2*/
  div.studentsuccess h2{
     font-weight: bold;
     text-align: center;
@@ -70,14 +80,17 @@ div.studentsucces{
     font-size: 35px;
     font-family: "Roboto Condensed";
  }
+ /*targets children of div class studentsuccess (div. articles). articles container is grid, which aligns children of div articles. Columns of content can be added or substracted by adjusting 1fr*/
  div.studentsuccess div.articles {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
  }
+ /*This applies specifically to img elements that are nested within article elements inside a div with the class studentsuccess. The object-fit property works to change the size of an image to fit its container. cover makes sure the image will fill the container completely.*/
  div.studentsuccess article img{
     width: 100%;
     object-fit: cover; 
  }
+ /*1=the article (child) can grow, 1= article can shrink. starts at 30% of parent container*/
  div.studentsuccess article{
     flex:1 1 30%;
     min-width: 300px;
@@ -85,10 +98,12 @@ div.studentsucces{
     padding: 1em;
     margin: 1em;
  }
+ /*all list items in ul will start with a bullet*/
  .articles ul {
     list-style: disc;
     margin-left: 1em;
  }
+ /*targets all elements in the class explore. Image doesn't repeat (no-repeat) scales image to cover the entire section, maintaining aspect ratio (cover). Because explore is a flexible container, all its child items can be adjusted as listed:*/
  .explore {
     background-image: url("images/silhouette-of-statue-of-liberty-at-sunset-2023-11-27-05-03-40-utc.jpeg");
     background-position: center;
@@ -99,6 +114,12 @@ div.studentsucces{
     display:flex;
     justify-content: center;
     align-items: center;
+ }
+ /*adjustment for mobile*/
+ @media (max-width: 480px) {
+    .explore {
+        min-height: 300px;
+    }
  }
  .explore h1{
     margin-left: 35%;
@@ -114,3 +135,30 @@ body.democracy article{
 }
 .democracy .explore{
     background-image: url("images/happy-senior-man-inserting-ballot-into-box-while-v-2024-02-29-05-12-44-utc.jpg");
+}
+
+/* images fit the maximun width of the carosaul container, aspect ratio will be adjusted if needed, flex container prevents shrinking.*/
+.carosaol img {
+    width: 600px; 
+    object-fit: contain; 
+    flex-shrink: 0; 
+}
+
+.carosaol {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}
+/*the class carosaolimages is inside its parent class carosaol. flex makes the former class into a flexbox container, enabling images to be in a horizontal row. the value "hidden" prevents images overflowing boundraries from being seen.*/
+.carosaol .carosaolimages {
+    display: flex;
+    overflow: hidden;
+}
+
+.carosaol button {
+    font-size: 20px;
+}
